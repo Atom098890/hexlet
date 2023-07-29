@@ -1,0 +1,13 @@
+name: testing
+  jobs: front-test
+    build: # имя взято для примера
+      runs-on: ubuntu-latest
+      steps: 
+        # Клонируем репозиторий
+      - uses: actions/checkout@v3
+        # Устанавливаем Node.js
+      - uses: actions/setup-node@v3
+        # Ставим зависимости
+      - run: npm install
+      - name: run tests
+        run: npm run test
