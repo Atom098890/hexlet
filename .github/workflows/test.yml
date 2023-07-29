@@ -1,14 +1,11 @@
 name: testing
 on: push
 jobs: front-test
-  build: # имя взято для примера
+  tests:
     runs-on: ubuntu-latest
     steps: 
-      # Клонируем репозиторий
     - uses: actions/checkout@v3
-      # Устанавливаем Node.js
     - uses: actions/setup-node@v3
-      # Ставим зависимости
     - run: npm install
     - name: run tests
       run: npm run test
